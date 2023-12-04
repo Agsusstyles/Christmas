@@ -13,6 +13,15 @@
   opacity: 0;
   animation: fallAnimation 5s forwards;
 }
+/* Add these styles for the tree */
+.tree {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid green; /* You can change the color */
+}
 
 @keyframes fallAnimation {
   0% {
