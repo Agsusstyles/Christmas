@@ -17,7 +17,7 @@ body {
 
 .falling-text p {
   font-size: 3em;
-  color: #fff;
+  color: #000000;
   animation: fallingText 5s linear forwards;
 }
 
@@ -35,7 +35,7 @@ body {
 /* Additional styles for your tree go here */
 
 /* Existing styles for the tree */
-#christmas-tree {
+.christmas-tree {
   position: absolute;
   top: 50%;
   left: 50%;
