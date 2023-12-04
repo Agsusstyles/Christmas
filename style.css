@@ -1,4 +1,7 @@
-/* Add these styles for falling text */
+body {
+  overflow: hidden;
+}
+
 .falling-text {
   position: fixed;
   top: 0;
@@ -8,39 +11,120 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  opacity: 0;
-  animation: fallAnimation 5s forwards;
-}
-/* Add these styles for the tree */
-.tree {
-  position: relative;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid green; /* You can change the color */
+  background-color: transparent;
+  pointer-events: none;
 }
 
-@keyframes fallAnimation {
+.falling-text p {
+  font-size: 3em;
+  color: #fff;
+  animation: fallingText 5s linear forwards;
+}
+
+@keyframes fallingText {
   0% {
-    opacity: 0;
     transform: translateY(-100vh);
+    opacity: 0;
   }
   100% {
+    transform: translateY(100vh);
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-/* Add these styles for better visibility of falling text */
-.christmas-tree {
-  position: relative;
-  z-index: 1;
+/* Additional styles for your tree go here */
+
+/* Existing styles for the tree */
+#christmas-tree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.tree, .lights, .balls, .star, .shadow {
-  position: relative;
-  z-index: 2;
+.tree {
+  /* Tree trunk styles */
+  width: 40px;
+  height: 60px;
+  background-color: #8B4513;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+.tree-details {
+  /* Tree body styles */
+  width: 200px;
+  height: 300px;
+  background-color: #228B22;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 10px 10px;
+}
+
+.lights {
+  /* Lights styles */
+  position: absolute;
+  bottom: 240px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.row-one, .row-two {
+  /* Lights row styles */
+  display: flex;
+  gap: 10px;
+}
+
+.row-one div, .row-two div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+
+.balls {
+  /* Ornaments styles */
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.balls div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #00f;
+  position: absolute;
+  transform-origin: bottom;
+}
+
+.star {
+  /* Star styles */
+  width: 40px;
+  height: 40px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-color: #ffd700;
+  position: absolute;
+  bottom: 290px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shadow {
+  /* Shadow styles */
+  width: 240px;
+  height: 20px;
+  background-color: #888;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* Combine with the existing styles for the falling text and adjust as needed */
