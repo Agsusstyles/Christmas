@@ -227,7 +227,6 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
   opacity: 0;
   animation: fallAnimation 5s forwards;
 }
